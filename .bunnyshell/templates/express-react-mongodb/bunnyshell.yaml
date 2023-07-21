@@ -1,10 +1,9 @@
 kind: Environment
 name: production
 type: primary
-urlHandle: tastytales
 environmentVariables:
-    MONGODB_PASSWORD: '<<BNS_SECRET>>'
-    MONGODB_USERNAME: '<<BNS_SECRET>>'
+    MONGODB_PASSWORD: 'rootpass'
+    MONGODB_USERNAME: 'rootuser'
 components:
     -
         kind: Database
@@ -24,7 +23,7 @@ components:
     -
         kind: Application
         name: node-backend
-        gitRepo: 'https://github.com/nirmalmaheshs/tasty-tales.git'
+        gitRepo: 'https://github.com/bns-hack/nirmalmaheshs_tasty-tales.git'
         gitBranch: main
         gitApplicationPath: tasty-table-backend
         dockerCompose:
@@ -49,7 +48,7 @@ components:
     -
         kind: Application
         name: react-ui
-        gitRepo: 'https://github.com/nirmalmaheshs/tasty-tales.git'
+        gitRepo: 'https://github.com/bns-hack/nirmalmaheshs_tasty-tales.git'
         gitBranch: main
         gitApplicationPath: tasty-table-ui
         dockerCompose:
